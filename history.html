@@ -10,23 +10,17 @@
 <body>
     <header>
         <nav>
-            <ul class="nav">
-                <li>                    
-                    <a class="button"href="index.html">Home</a>
-                </li>
-                <li>                    
-                    <a class="active button"href="history.html">History</a>
-                </li>
-                <li>                    
-                    <a class="button"href="tricks.html">Tricks</a>
-                </li>
-                <li>                    
-                    <a class="button"href="competitions.html">Competitions</a>
-                </li>
-            </ul>
+            <div id="navID" class="navClass">
+                <a href = "javascript:void(0)" class="closebtn" onclick = "closeMobileNav()">&times;</a>           
+                <a class="button" href="index.html" id="home">Home</a>                   
+                <a class="active button" href="history.html" id="history">History</a>                   
+                <a class="button" href="tricks.html" id="tricks">Tricks</a>                 
+                <a class="button" href="competitions.html" id="competitions">Competitions</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openMobileNav()">&#9776;</span>
         </nav>
         <h1>History</h1>
     </header>
-    
+    <script src="/script/script.js"></script>
 </body>
 </html>
