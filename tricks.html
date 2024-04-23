@@ -8,25 +8,111 @@
     <title>Roller Skating</title>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header>
         <nav>
-            <ul class="nav">
-                <li>                    
-                    <a class="button"href="index.html">Home</a>
-                </li>
-                <li>                    
-                    <a class="button"href="history.html">History</a>
-                </li>
-                <li>                    
-                    <a class="active button"href="tricks.html">Tricks</a>
-                </li>
-                <li>                    
-                    <a class="button"href="competitions.html">Competitions</a>
-                </li>
-            </ul>
+            <div class="top-header">
+                <span class="menu-icon" style="font-size:30px;cursor:pointer" onclick="openMobileNav()">&#9776;</span>
+                <h1>Tricks</h1>
+            </div>
+            <div id="navID" class="navClass">
+                <a href = "javascript:void(0)" class="closebtn" onclick = "closeMobileNav()">&times;</a>           
+                <a class="button" href="index.html" id="home">Home</a>                   
+                <a class="button" href="history.html" id="history">History</a>                   
+                <a class="active button" href="tricks.html" id="tricks">Tricks</a>                 
+                <a class="button" href="competitions.html" id="competitions">Comps</a>
+            </div>
         </nav>
-        <h1>Tricks</h1>
     </header>
     
+    <main id="main">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">Show all tricks</button>
+            <button class="btn" onclick="filterSelection('stops')">Stops</button>
+            <button class="btn" onclick="filterSelection('basics')">Basics</button>
+            <button class="btn" onclick="filterSelection('stalls')">Stalls</button>
+            <button class="btn" onclick="filterSelection('grinds')">Grinds</button>
+            <button class="btn" onclick="filterSelection('slides')">Slides</button>
+            <button class="btn" onclick="filterSelection('jumps-flips')">Jumps/Flips</button>
+        </div>
+
+        <div class="row">
+            <div class="column filterDiv stops">
+                <div class="content">
+                    <img src="images/Plow-stop.png" class="portfolio-image" alt="A man on rollerskates wearing a helmet and protective gear demonstrates a plow stop">
+                    <h3>Plow Stop</h3>
+                </div>
+            </div>
+            <div class="column filterDiv stops">
+                <div class="content">
+                    <img src="images/T-stop.png" class="portfolio-image" alt="Black rollerskates with green wheels demonstrate a t-stop">
+                    <h3>T Stop</h3>
+                </div>
+            </div>
+            <div class="column filterDiv basics">
+                <div class="content">
+                    <img src="images/Pumping.png" class="portfolio-image" alt="3 still-frame shots of a woman on rollerskates pumping up a concrete ramp">
+                    <h3>Pumping</h3>
+                </div>
+            </div>
+            <div class="column filterDiv basics">
+                <div class="content">
+                    <img src="images/Drop-in.png" class="portfolio-image" alt="A woman on rollerskates drops into a concrete ramp">
+                    <h3>Drop In</h3>
+                </div>
+            </div>
+            <div class="column filterDiv stalls">
+                <div class="content">
+                    <img src="images/Frontside-stall.png" class="portfolio-image" alt="Tan and white rollerskates on top of the coping on a ramp">
+                    <h3>Frontside Stall</h3>
+                </div>
+            </div>
+            <div class="column filterDiv stalls">
+                <div class="content">
+                    <img src="images/Fakie-stall.png" class="portfolio-image" alt="A person wearing knee pads and blue rollerskates fakie stalls on top of the coping on a ramp">
+                    <h3>Fakie Stall</h3>
+                </div>
+            </div>
+            <div class="column filterDiv grinds">
+                <div class="content">
+                    <img src="images/50-50.png" class="portfolio-image" alt="A woman wearing an orange helmet and protective gear 50-50 grinds a ramp on rollerskates">
+                    <h3>50-50s</h3>
+                </div>
+            </div>
+            <div class="column filterDiv grinds">
+                <div class="content">
+                    <img src="images/Soul-grind.png" class="portfolio-image" alt="A woman soul grinds a concrete ledge on rollerskates">
+                    <h3>Soul Grind</h3>
+                </div>
+            </div>
+            <div class="column filterDiv slides">
+                <div class="content">
+                    <img src="images/Backslide-slide.png" class="portfolio-image" alt="A woman wearing protective gear does a backside slide on a ramp">
+                    <h3>Backside Slide</h3>
+                </div>
+            </div>
+            <div class="column filterDiv slides">
+                <div class="content">
+                    <img src="images/Frontside-slide.png" class="portfolio-image" alt="A person wearing knee pads slides down a metal rail on rollerskates">
+                    <h3>Frontside Slide</h3>
+                </div>
+            </div>
+            <div class="column filterDiv jumps-flips">
+                <div class="content">
+                    <img src="images/Half-cab.png" class="portfolio-image" alt="A woman jumps 180 on to the coping of a ramp while going fakie on rollerskates">
+                    <h3>Half-Cab</h3>
+                </div>
+            </div>
+            <div class="column filterDiv jumps-flips">
+                <div class="content">
+                    <img src="images/Barani.png" class="portfolio-image" alt="A woman wearing a helmet 'cartwheels' over a ramp with no hands on rollerskates">
+                    <h3>Barani</h3>
+                </div>
+            </div>
+        </div>          
+        </div>
+    </main>
+    <script src="/script/script.js"></script>
+    <script src="/script/tricks.js"></script>
 </body>
 </html>

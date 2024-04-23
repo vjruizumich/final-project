@@ -8,25 +8,42 @@
     <title>Roller Skating</title>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header>
         <nav>
-            <ul class="nav">
-                <li>                    
-                    <a class="button"href="index.html">Home</a>
-                </li>
-                <li>                    
-                    <a class="button"href="history.html">History</a>
-                </li>
-                <li>                    
-                    <a class="button"href="tricks.html">Tricks</a>
-                </li>
-                <li>                    
-                    <a class="active button"href="competitions.html">Competitions</a>
-                </li>
-            </ul>
+            <div class="top-header">
+                <span class="menu-icon" style="font-size:30px;cursor:pointer" onclick="openMobileNav()">&#9776;</span>
+                <h1>Competitions</h1>
+            </div>
+            <div id="navID" class="navClass">
+                <a href = "javascript:void(0)" class="closebtn" onclick = "closeMobileNav()">&times;</a>           
+                <a class="button" href="index.html" id="home">Home</a>                   
+                <a class="button" href="history.html" id="history">History</a>                   
+                <a class="button" href="tricks.html" id="tricks">Tricks</a>                 
+                <a class="active button" href="competitions.html" id="competitions">Comps</a>
+            </div>
         </nav>
-        <h1>Competitions</h1>
     </header>
-    
+    <main id="main">
+        <button class="accordion accordion-btn">Montreal Cup</button>
+        <div class="panel">
+            <img src="images/Montreal.png" alt="A landscape view of people walking in the city Montreal">
+            <p>Montreal Cup</p>
+        </div>
+
+        <button class="accordion accordion-btn">Bevy</button>
+        <div class="panel">
+            <img src="images/Bevy.png" alt="An indoor skatepark with a ramp">
+            <p>Bevy Space</p>
+        </div>
+
+        <button class="accordion accordion-btn">Toronto</button>
+        <div class="panel">
+            <img src="images/Toronto.png" alt="An indoor skatepark with a ramp and boxes">
+            <p>Toronto Quad/Blade</p>
+        </div>
+    </main>
+    <script src="/script/script.js"></script>
+    <script src="/script/competitons.js"></script>
 </body>
 </html>

@@ -8,19 +8,87 @@
     <title>Roller Skating</title>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header>
         <nav>
+            <div class="top-header">
+                <span class="menu-icon" style="font-size:30px;cursor:pointer" onclick="openMobileNav()">&#9776;</span>
+                <h1>History</h1>
+            </div>
             <div id="navID" class="navClass">
                 <a href = "javascript:void(0)" class="closebtn" onclick = "closeMobileNav()">&times;</a>           
                 <a class="button" href="index.html" id="home">Home</a>                   
                 <a class="active button" href="history.html" id="history">History</a>                   
                 <a class="button" href="tricks.html" id="tricks">Tricks</a>                 
-                <a class="button" href="competitions.html" id="competitions">Competitions</a>
+                <a class="button" href="competitions.html" id="competitions">Comps</a>
             </div>
-            <span style="font-size:30px;cursor:pointer" onclick="openMobileNav()">&#9776;</span>
         </nav>
-        <h1>History</h1>
     </header>
+    <main id="main">
+
+    <div class="scrollBar">
+        <h2 id="scrollMonth">Month</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+
+    <div id="historyContent">
+        <div class="month-section" data-month="January">
+            January
+            <p>First time dropping in a ramp!</p>
+        </div>
+        <div class="month-section" data-month="February">
+            February
+            <p>Started working on frontside stalls.</p>
+        </div>
+        <div class="month-section" data-month="March">
+            March
+            <p>Met my first group of rollerskaters!</p>
+        </div>
+        <div class="month-section" data-month="April">
+            April
+            <p>Participated in my first competiton.</p>
+        </div>
+        <div class="month-section" data-month="May">
+            May
+            <p>Improved on my fakie stalls.</p>
+        </div>
+        <div class="month-section" data-month="June">
+            June
+            <p>Started skating at other outdoor skateparks.</p>
+        </div>
+        <div class="month-section" data-month="July">
+            July
+            <p>Visited over 5 new skateparks!</p>
+        </div>
+        <div class="month-section" data-month="August">
+            August
+            <p>Learned to air out of a ramp.</p>
+        </div>
+        <div class="month-section" data-month="September">
+            September
+            <p>Participated in my second competiton!</p>
+        </div>
+        <div class="month-section" data-month="October">
+            October
+            <p>Worked on 50-50 stalls.</p>
+        </div>
+        <div class="month-section" data-month="November">
+            November
+            <p>Participated in my third comp!</p>
+        </div>
+        <div class="month-section" data-month="December">
+            December
+            <p>Learned to half-cab!</p>
+        </div>
+        <p class="space"></p>
+    </div>
+
+    
+
+    </main>
     <script src="/script/script.js"></script>
+    <script src="/script/history.js"></script>
 </body>
 </html>

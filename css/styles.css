@@ -1,3 +1,155 @@
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: darkblue;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
+}
+  
+.skip-link:focus {
+    top: 0;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    background-color: black;
+}
+
+.main {
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+    color: white;
+}
+
+div {
+    color: white;
+}
+  
+p {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+div.content p {
+    color: black;
+}
+
+div.content h3 {
+    color: black;
+}
+
+div.panel p {
+    color: black;
+}
+
+.space {
+    padding-bottom: 600px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+/* Add padding BETWEEN each column */
+.row,
+  .row > .column {
+    padding: 8px;
+}
+  
+/* Create four equal columns that floats next to each other */
+.column {
+    flex: 100%;
+    max-width: 100%;
+}
+  
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/*Comp Accordions*/
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel p{
+    padding: 10px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.top-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
 .navClass {
     height: 100%;
     width: 0;
@@ -16,14 +168,15 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
   
 }
   
 .navClass a:hover{
-    color: #f1f1f1;
+    color: palegreen;
+    text-decoration: underline;
 }
   
 .navClass .closebtn {
@@ -40,19 +193,24 @@
     display: block;
 }
 
+.desktopNav {
+    display: none;
+}
+
 /* Trick filter */
+img.portfolio-image {
+    width: 100%;
+}
+
 .filterDiv {
     float: left;
     background-color: #2196F3;
     color: #ffffff;
-    width: 100px;
-    line-height: 100px;
     text-align: center;
     margin: 2px;
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
-/* The "show" class is added to the filtered elements */
 .show {
     display: block;
 }
@@ -62,7 +220,6 @@
     overflow: hidden;
 }
 
-/* Style the buttons */
 .btn {
     border: none;
     outline: none;
@@ -82,53 +239,81 @@
     color: white;
 }
 
-@media only screen and (min-width: 801px) {
-    /* do i need this?*/
-    .menu-icon {
-        display: none;
-    }
+/* progress
+Bar
+css */
+.scrollBar {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    background-color: black;
+    width: 100px;
+}
 
-    .navClass a {
-        display: block;
-    }
+.progress-container {
+    width: 100px;
+    height: 100vh;
+    background: darkgreen;
+}
 
-    .navClass a:first-child {
-        display: none;
-    }
+.progress-bar {
+    width: 100px;
+    background: palegreen;
+    height: 0%;
+}
 
-    #navID a {
-        position: absolute;
-        left: -80px;
-        transition: 0.3s;
-        padding: 15px;
-        width: 100px;
-        text-decoration: none;
-        font-size: 20px;
-        color: white;
-        border-radius: 0 5px 5px 0;
+.month-section.highlight {
+    background-color: darkgreen;
+}
+
+.month-section {
+    width: 75%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.month-section p {
+    margin-top: 10px;
+}
+
+p {
+    padding-bottom: 100px;
+}
+
+/* accordion style */
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+  }
+  
+  .panel p {
+    grid-column: 2; 
+  }
+  
+  .panel img {
+    grid-column: 1;
+    margin-right: 20px;
+  }
+  
+
+/* Responsive, makes a two column-layout instead of four columns */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 49.3%;
     }
-      
-    #navID a:hover {
-        left: 0;
-    }
-      
-    #home {
-        top: 20px;
-        background-color: #04AA6D;
-    }
-      
-    #history {
-        top: 80px;
-        background-color: #2196F3;
-    }
-      
-    #tricks {
-        top: 140px;
-        background-color: #f44336;
-    }
-      
-    #competitions {
-        top: 200px;
-        background-color: #555
+}
+
+@media screen and (min-width: 801px) {
+    /* css for desktop tricks */
+    .column {
+        flex: 25%;
+        max-width: 24%;
+        padding: 0 4px;
     }
 }
